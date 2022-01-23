@@ -1,0 +1,17 @@
+{
+  "name": "adjust-losseless-key-frame",
+  "version": "1.0.0",
+  "description": "This script is to pair with Losslesscut, it allows to add a \"smart cut\" feature to the software:\n1/ Do the cuts of your video in Losslesscut as usual, just don't export the videos you want.\n2/ Locate the Losslesscut project file the software generated (export it if needed), then run sth like: 'node adjust-key-frames.js <project.llc>'.\nThis will generate two files: a new video and a new .llc file.\n4/ Import the new .llc (something like project-adjusted-keys.llc) in Losslesscut, and export the cuts: the keyframes are at the right places to do smart cuts of your cuts.\n\nDon't forget to install the json5 dependency with 'npm install' before using this script ;-)",
+  "main": "adjust-key-frames.js",
+  "scripts": {
+    "start": "node adjust-key-frames.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gami",
+  "type": "module",
+  "license": "ISC",
+  "dependencies": {
+    "json5": "2.2.0",
+    "shell-escape": "0.2.0"
+  }
+}
